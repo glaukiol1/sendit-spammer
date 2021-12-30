@@ -30,7 +30,7 @@ Steps:
 
 Now, after you have copied the JSON payload, go and create a new file, you can name this whatever you like.
 
-Then, in line 30 of main.py, change the '/home/kali/Desktop/json_payload.txt' with '/your/new/path'.
+Then, in line 30 of main.py, change the '/home/kali/Desktop/json_payload.txt' with your new path.
 That new path should be the full path to your JSON payload file.
 
 Open sendit.sh, and change '/home/kali/Desktop/main.py' to the full path to your main.py file.
