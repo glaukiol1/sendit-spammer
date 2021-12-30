@@ -41,7 +41,7 @@ Note, the *sendit.sh* file only works in GNU-linux systems, for windows, you can
 In GNU-linux systems, these commands should work;
 ```sh
 glaukiol1@github $ chmod +x ./sendit.sh # make the file excecutable.
-glaukiol1@github $ ./sendit.sh # run the file, this will show the help page.
+glaukiol1@github $ ./sendit.sh # run the file, this will show the help page. Arguments: [number of instances to run]
 ```
 
 In windows, if you haven't created a batch file, you can run the file directly, although this will only spawn 1 instance of the bot;
