@@ -1,4 +1,4 @@
-# Sendit Spammer
+# Sendit Spammer Python 
 
 ### ⚠️ I am not responsible for how you use this tool. This tool is against "Sendit" ToS and shall not be used in a production enviroment. You might be blacklisted from "Sendit" services for using this tool.⚠️
 
