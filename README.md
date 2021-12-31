@@ -25,29 +25,17 @@ Steps:
   **7.** In this new menu, there should be place named "Request Payload"
   
   **8.** Copy this, this is the JSON payload.
-  
-## Making changes
-
-Now, after you have copied the JSON payload, go and create a new file, you can name this whatever you like.
-
-Then, in line 30 of main.py, change the '/home/kali/Desktop/json_payload.txt' with your new path.
-That new path should be the full path to your JSON payload file.
-
-Open sendit.sh, and change '/home/kali/Desktop/main.py' to the full path to your main.py file.
-
-Note, the *sendit.sh* file only works in GNU-linux systems, for windows, you can create your own batch file, it should be straight forward. Or if you cant create a batch file, go further down to the **Running** section.
 
 ## Running
-In GNU-linux systems, these commands should work;
-```sh
-glaukiol1@github $ chmod +x ./sendit.sh # make the file excecutable.
-glaukiol1@github $ ./sendit.sh # run the file, this will show the help page. Arguments: [number of instances to run]
-```
 
-In windows, if you haven't created a batch file, you can run the file directly, although this will only spawn 1 instance of the bot;
+To run the bot, run
+```sh
+#> python3 run.py
 ```
-python3 main.py
-```
+Then, the script will ask for 2 things,
+- The number of instances of bots to spawn (please take note that you may not be able to spawn a lot if you have low CPU performance), the higher this number is the more bots will spawn. I recommend at the upmost with should be 200. 
+- The JSON Payload, this you got from the previous step, make sure you dont include outer qoutation marks!
+
 
 **Good luck!**
 
